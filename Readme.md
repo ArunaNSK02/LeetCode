@@ -22,5 +22,3 @@ Each problem is stored in a separate folder named after the problem.
 ## Contribution
 
 Feel free to contribute by submitting pull requests with optimized solutions or alternative approaches!
-
-Please make sure to update tests as appropriate.
