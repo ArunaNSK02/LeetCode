@@ -1,0 +1,9 @@
+FUNCTION findLowest(INT[] arr)
+    INT lowestNumber = arr[0]
+    FOR EACH number in INT[] arr
+        IF(number < lowestNumber)
+            lowestNumber = number
+        ENDIF
+    ENDFOR
+    RETURN lowestNumber
+END FUNCTION

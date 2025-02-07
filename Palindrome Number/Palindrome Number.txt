@@ -1,0 +1,25 @@
+FUNCTION checkPalindrome(INT number)
+    STRING numberArray[] = CONVERT number TO STRING ARRAY
+    DECLARE INT indexOne AND INT indexTwo
+    BOOL isPalindrome = false;
+    IF(numberArray.length is EVEN)
+        indexTwo = numberArray.length / 2
+        indexOne = indexTwo - 1
+    ELSE
+        indexTwo = (numberArray.length / 2) + 1
+        indexOne = (numberArray.length / 2) - 1
+    ENDIF
+    WHILE(indexOne != -1 && indexTwo != numberArray.length)
+        IF(numberArray[indexTwo] == numberArray[indexOne])
+            isPalindrome = true
+            indexTwo++
+            indexOne--
+        ELSE
+            isPalindrome = false
+            RETURN isPalindrome
+        ENDIF
+    ENDWHILE
+    RETURN isPalindrome
+END FUNCTION
+
+

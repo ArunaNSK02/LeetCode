@@ -1,0 +1,25 @@
+()
+INT arraySize = INPUT("Enter the size of the array")
+IF arraySize > 0 THEN
+    DECLARE numArray : ARRAY[arraySize] OF INT
+    FOR index = 0 TO arraySize-1
+        INT userInput = INPUT("Enter value for array index:" + index)
+        numArray[index] = userInput
+    END FOR
+    INT targetValue = INPUT("Enter target value")
+    INT firstNumber = 0
+    INT secondNumber = 0
+    FOR firstIndex = 0 TO arraySize-1
+        firstNumber = numArray[firstIndex]
+        FOR secondIndex = firstIndex + 1 TO arraySize
+            secondNumber = numArray[secondIndex]
+            IF(firstNumber + secondNumber == targetValue)
+                PRINT "[" + firstIndex + ", " + secondIndex + "]"
+                BREAK
+            ENDIF
+        ENDFOR
+    ENDFOR
+    PRINT ("No match found!")                   
+ELSE
+    PRINT ("Array Size should > 0")
+ENDIF    

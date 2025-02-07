@@ -1,0 +1,21 @@
+FUNCTION bubbleSort(INT[] arr)
+    INT lastIndex = arr.length - 1
+    DECLARE INT tempVal
+    FOR (INT outerRound = 0; outerRound < arr.length; outerRound++)
+        isSwapped = false
+        FOR(INT index = 0; index < lastIndex; index++)
+            IF(arr[index] > arr[index+1])
+                tempVal = arr[index]
+                arr[index] = arr[index+1]
+                arr[index+1] = tempVal
+                isSwapped = true
+            END IF
+        END FOR
+        lastIndex--;
+
+        IF(!isSwapped)
+            RETURN arr
+        END IF
+    END FOR
+    RETURN arr    
+END FUNCTION

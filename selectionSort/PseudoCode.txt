@@ -1,0 +1,17 @@
+FUNCTION bubbleSort(int[] arr)
+    INT lowestNumber
+    FOR startIndex = 0 TO arr.length-1
+        lowestNumber = startIndex
+        FOR index = startIndex TO arr.length-1
+            IF arr[lowestNumber] > arr[index]
+                lowestNumber = index
+            ENDIF
+            index++
+        ENDFOR
+        tempVal = arr[startIndex]
+        arr[startIndex] = arr[lowestNumber]
+        arr[lowestNumber] = tempVal
+        startIndex++
+    ENDFOR
+    RETURN arr
+END FUNCTION
